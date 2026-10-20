@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  padding: 48px 22px;
+  color: #292640;
+  background: linear-gradient(135deg, #fbf8ff 0%, #f5fbf8 55%, #fff7f3 100%);
+}
+
+.contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  align-items: start;
+}
+
+img {
+  display: block;
+}
+
+.tarjeta1,
+.tarjeta2,
+.tarjeta3,
+.tarjeta4 {
+  min-width: 0;
+}
+
+.autor {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.autor img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #d8c8f1;
+  background: #fff;
+}
+
+.autor h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #302a50;
+}
+
+.autor span {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 13px;
+  color: #766a91;
+  font-family: Arial, sans-serif;
+}
+
+.burbuja {
+  position: relative;
+  background: #6f55a5;
+  color: #fff;
+  padding: 25px;
+  border-radius: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 12px 24px #6f55a51f;
+  line-height: 1.65;
+}
+
+.burbuja p + p {
+  margin-top: 14px;
+}
+
+.burbuja::after {
+  content: "";
+  position: absolute;
+  left: 30px;
+  bottom: -13px;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 14px solid #6f55a5;
+}
+
+.tarjeta1 .autor {
+  padding-left: 8px;
+}
+
+.tarjeta2 {
+  background: #eaf7f1;
+  border: 1px solid #cce9dc;
+  border-radius: 22px;
+  padding: 25px;
+  box-shadow: 0 12px 25px #426c5914;
+  line-height: 1.65;
+}
+
+.tarjeta2 p {
+  margin-bottom: 18px;
+}
+
+.tarjeta2 .autor img {
+  border-color: #a8ddc7;
+}
+
+.tarjeta2 .autor span {
+  color: #4e8a70;
+}
+
+.tarjeta3 {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 0.85fr 1.7fr;
+  gap: 18px;
+}
+
+.tarjeta3 > img {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  object-fit: cover;
+  border-radius: 26px;
+  border: 5px solid #ffd4c9;
+  background: #ffd4c9;
+}
+
+.info {
+  background: #fff0ec;
+  color: #393047;
+  border: 1px solid #ffd5cb;
+  border-radius: 22px;
+  padding: 28px;
+  line-height: 1.65;
+  box-shadow: 0 12px 25px #8b514014;
+}
+
+.estrellas {
+  color: #ed927b;
+  font-size: 24px;
+  letter-spacing: 3px;
+}
+
+.info h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 6px;
+  color: #342a48;
+}
+
+.info span {
+  display: block;
+  color: #a66355;
+  margin-bottom: 14px;
+}
+
+.info p + p {
+  margin-top: 12px;
+}
+
+.tarjeta4 {
+  grid-column: 1 / 3;
+  background: #fff;
+  border: 1px solid #dfd3f3;
+  border-radius: 24px;
+  padding: 36px 48px 28px;
+  text-align: center;
+  box-shadow: 0 12px 28px #5b487514;
+  line-height: 1.7;
+}
+
+.tarjeta4 p {
+  max-width: 600px;
+  margin: 0 auto 28px;
+}
+
+.fotos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+.chica {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  opacity: 0.65;
+  object-fit: cover;
+}
+
+.grande {
+  width: 70px;
+  height: 70px;
+  border: 4px solid #d8c8f1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.flecha {
+  color: #755ba8;
+  font-size: 22px;
+  padding: 0 10px;
+}
+
+.tarjeta4 h3 {
+  color: #4e3d72;
+  font-weight: 700;
+  margin-top: 16px;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 28px 15px;
+  }
+
+  .contenedor {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .tarjeta3,
+  .tarjeta4 {
+    grid-column: auto;
+  }
+
+  .tarjeta3 {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta3 > img {
+    height: 220px;
+    min-height: 220px;
+  }
+
+  .tarjeta4 {
+    padding: 28px 18px;
+  }
+
+  .info,
+  .tarjeta2,
+  .burbuja {
+    padding: 22px;
+  }
+}
